@@ -1,0 +1,19 @@
+# Watchout Display startup script.
+# autostart.txt
+
+authenticate 1
+setLogoString "The show will begin shortly"
+delay 5000
+load "MyShow"
+wait
+run
+
+# To run an Auxiliary Timeline named "MyAuxTL", from a show named "MyShow":
+authenticate 1
+setLogoString "The show will begin shortly"
+delay 5000
+load "MyShow"
+wait
+run MyAuxTL
+
+#"setLogoString" is not necessary, but will show at startup as a confirmation that the script is used.

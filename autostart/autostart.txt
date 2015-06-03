@@ -1,0 +1,83 @@
+;
+; autostart.txt
+;
+; This is an example script file on how to use different commands to control the
+; start-up and other behavior of the WATCHPAX. 
+;
+; To enable a command simply remove the semicolon sign at the start of the line in front of the command.
+; To disable a command just add a semi-colon at the beginning of the line in front of the command.
+; Please remember that you can only have one command on each line.
+;
+; See each individual command in the WATCHOUT User's Guide for more details.
+;
+;  ------------------------------------------------------------------
+;
+; This is a small example on a scrip that automatically loads and starts a show named "MyShow"
+;
+; Note:  If the show contains of more then one computer then this script should only run on
+; the computer designated as the cluster master and not on any of the other members of the cluster.
+; The cluster master will automatically send the load command to all members of the cluster.
+;
+; authenticate 1
+; setLogoString "The show will begin shortly"
+; delay 5000
+; load "MyShow"
+; wait
+; run
+;
+;  ------------------------------------------------------------------
+;
+; These are some examples on how to set a fixed IP number on the WATCHOUT computer.
+; You only need to run this script once. After that the WATCHOUT computer remember the
+; last set fixed IP number. The fixed IP numbers is shown in the start-up screen under
+; the WATCHOUT 5 logo. The IP number inside the parentheses is the DHCP/link-local IP number.
+; Remember that you always need to authenticate to level 2 before you try to set the IP number.
+;
+; Example: Set the fixed IP number to 192.168.0.100
+;
+; authenticate 2
+; setIP 192.168.0.100
+;
+; Example: Set the fixed IP number to 2.0.0.10 with the network mask 255.0.0.0
+;
+: authenticate 2
+; setIP 2.0.0.10 255.0.0.0
+;
+; Example: Remove the fixed IP number and restore the WATCHOUT computer to use the DHCP/link-local IP number.
+;
+; authenticate 2
+; setIP
+;
+;  ------------------------------------------------------------------
+;
+; This is an example on how to enable a serial port for use with the Dataton WIRETAG.
+;
+authenticate 1
+serialPort true COM3
+;
+;  ------------------------------------------------------------------
+;
+; These are some examples on how to enable the WATCHOUT computer to synchronize
+; the main timeline to a external LTC (SMPTE/EBU) timecode source.
+;
+; Example: Enable timecode format EBU 25 fps (2)
+;
+; authenticate 1
+; timecodeMode 2
+;
+; Example: Enable timecode format SMPTE 29.97 NDF (3)
+;
+; authenticate 1
+; timecodeMode 3
+;
+; Example: Enable timecode format SMPTE 29.97 DF (4) with an offset of +1 hour
+;
+; authenticate 1
+; timecodeMode 4 "01:00:00.000"
+;
+; Example: Disable external timecode control
+;
+; authenticate 1
+; timecodeMode 0
+;
+;
