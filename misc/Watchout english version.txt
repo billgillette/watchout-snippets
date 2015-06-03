@@ -1,0 +1,3 @@
+# Create shortcut to Watchout in English.
+
+C:/WATCHOUT/WATCHMAKER.EXE -Lang en
