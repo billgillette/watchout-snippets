@@ -1,0 +1,52 @@
+UTF8 DATATON_DFC_DATA_590925_620721_AUC069 {
+"Structure and File Format (C) Copyright Dataton AB" 2013 1
+"WATCHMAKER" 5 5 1 0
+ObjTransferable ObjTransferable struct extends {
+TextTransferable struct extends {
+Transferable struct {
+}
+} {
+}
+} {
+mObjData list object true,
+mClassName string
+} {
+{
+MIDINoteVariable struct extends {
+MIDIVariable struct extends {
+Variable struct extends {
+VarListItem struct {
+mName string
+}
+} {
+mValue variant,
+mLimit float
+}
+} {
+mChannel int
+}
+} {
+mNote int
+} { "Akai Pad 3", 0, 1, 1, 38
+},
+MIDINoteVariable { "Akai_Pad_4", 0, 1, 1, 39 },
+MIDINoteVariable { "Akai_Pad_2", 0, 1, 1, 37 },
+MIDINoteVariable { "Akai_Pad_6", 0, 1, 1, 41 },
+MIDINoteVariable { "Akai_Pad_5", 0, 1, 1, 40 },
+MIDINoteVariable { "Akai_Pad_1", 0, 1, 1, 36 },
+MIDINoteVariable { "Akai_Pad_8", 0, 1, 1, 43 },
+MIDINoteVariable { "Akai_Pad_7", 0, 1, 1, 42 },
+MIDIControllerVariable struct extends {
+MIDIVariable
+} {
+mController int,
+mHighRes bool
+} { "Akai Potard 3", 0, 1, 1, 3, false
+},
+MIDIControllerVariable { "Akai_Potard_2", 0, 1, 1, 2, false },
+MIDIControllerVariable { "Akai_Potard_1", 0, 1, 1, 1, false },
+MIDIControllerVariable { "Akai_Potard_4", 0, 1, 1, 4, false }
+},
+"VarListItem"
+}
+}
