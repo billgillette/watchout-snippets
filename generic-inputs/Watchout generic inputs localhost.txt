@@ -1,0 +1,23 @@
+// Setting Watchout Generic Inputs from Timeline using Localhost IP
+
+# Watchout Output:
+Network Address: 127.0.0.1
+Port: 3039 (Cluster)
+Port: 3040 (Production)
+
+# Generic Input:
+Limit: 1
+
+# Timeline Outputs:
+// Authenticate connection.
+authenticate 1
+// Set Input to 1.
+setInput "PPT43" 1$0D
+// Set Input to 0.
+setInput "PPT43" 0$0D
+
+# Aux Timeline Triggers:
+// Simple check.
+MidiInputName > 0.1 && GenericInputName < 1
+// Combined check.
+MidiInputName > 0.1 && GenericInputName1 < 1 && GenericInputName2 < 1
