@@ -1,0 +1,32 @@
+UTF8 DATATON_DFC_DATA_590925_620721_AUC069 {
+"Structure and File Format (C) Copyright Dataton AB" 2013 1
+"WATCHMAKER" 5 5 1 0
+ObjTransferable ObjTransferable struct extends {
+TextTransferable struct extends {
+Transferable struct {
+}
+} {
+}
+} {
+mObjData list object true,
+mClassName string
+} {
+{
+InternalVariable struct extends {
+Variable struct extends {
+VarListItem struct {
+mName string
+}
+} {
+mValue variant,
+mLimit float
+}
+} {
+} { "GenInputLimit200", 0, 200
+},
+InternalVariable { "GenInputLimit1", 0, 1 },
+InternalVariable { "GenInputLimit50", 0, 50 }
+},
+"VarListItem"
+}
+}
