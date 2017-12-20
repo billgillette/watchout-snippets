@@ -1,0 +1,20 @@
+HOW EFFICIENT IS NDI IN VIDEO COMPRESSION?
+NDI uses compression to enable transmission of a of video streams the network. According to NewTek, NDI is one of the most efficient codecs in existence: 
+
+“NDI achieves significantly better compression than the majority of codecs that have been accepted for professional broadcast use. On a typical, modern Intel-based i7 processor, the codec is able to compress a 1920x1080 video signal at 250 frames per second using a single core.
+
+The peak signal-to-noise ratio (PSNR) of the NDI codec exceeds 70dB for typical video content. Uniquely, and importantly, NDI is the first ever codec to provide multi-generational stability. This means that once a video signal is compressed, there is no further loss.
+
+NDI has a technical latency of 16 video scan lines, although in practice, most implementations would be one field of latency.”
+
+NDI COMPRESSION EXAMPLES
+NDI compresses the video streams so that the NDI video streams are distributed through the network at a ratio 15:1 to an uncompressed video of the same format. The following is an estimate of bandwidth load per NDI video stream for common delivery formats, and is taken from the NewTek documentation “Adding NDI to your network”:
+
+1 x stream SD video = 20 Mbps
+1 x stream 1080p50/59.94 video = 125Mbps
+1 x stream 720p50/59.94 video = 90Mbps
+1 x stream UHDp30 video = 200Mbps
+1 x stream 1080i50/59.94 video = 100Mbps
+1 x stream UHDp60 video = 250Mbps 
+NDI FORMATS
+NDI supports all resolutions, frame rates and video streams, with and without alpha channel.The most common implementations are expected to utilize 8-bit UYVY and RGBA video, however support for 10-bit and 16-bit is available. The internal pipeline of the codec is maintained entirely at 16-bit or better.
