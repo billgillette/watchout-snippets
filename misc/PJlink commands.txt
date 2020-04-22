@@ -1,0 +1,13 @@
+PJLink Commands:
+
+Output TCP: 
+192.168.0.8 / 4352
+
+Power On:  %1POWR 1$0D
+Power Off: %1POWR 0$0D
+Shutter Open:  %1AVMT 30$0D
+Shutter Close: %1AVMT 31$0D
+Input VGA: %1INPT 12$0D
+Input DVI: %1INPT 31$0D
+Input SDI: %1INPT 34$0D
+KeepAlive: $0D
