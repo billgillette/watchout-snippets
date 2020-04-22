@@ -1,0 +1,5 @@
+TweenValue + ((bg_hue - 10) / 100)
+
+TweenValue * bg_saturation
+
+TweenValue * bg_gain
